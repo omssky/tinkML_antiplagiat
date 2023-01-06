@@ -9,7 +9,7 @@ class FileComparer:
         """
         Calculate the similarity of two files by comparing their contents.
         """
-        with open(file1, 'r') as f1, open(file2, 'r') as f2:
+        with open(file1, 'r', encoding="utf8") as f1, open(file2, 'r', encoding="utf8") as f2:
             text1 = f1.read()
             text2 = f2.read()
             text1 = self.normalizer.normalize(text1)
